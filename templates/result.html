@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result Page</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/result.css">
 </head>
 <body>
-<h1 class="heading">Your Result 🚀</h1>
+    <h1 class="heading">Your Result 
+    </h1>
+    <div class="ellipse1"></div>
+    <div class="ellipse2"></div>
+    <div class="ellipse3"></div>
+    <div class="ellipse4"></div>
+    <div class="ellipse5"></div>
 
-<div class="{{ color }}">
-    <h2>{{ result }}</h2>
-</div>
+    <div class="icon-heart"></div>
+    <div class="icon-heart1"></div>
 
-<div class="suggestion">
-    <h3>🔥 YOUR PERSONALIZED HEALTH TIPS : </h3>
-    <p>{{ suggestion }}</p>
-</div>
+    <div class="{{ color }}">
+        <h2>{{ result }}</h2>
+    </div>
 
-<a href="/" class="back">🔙 Go Back</a>
+    <div class="suggestion">
+        <h3>🔥 YOUR PERSONALIZED HEALTH TIPS :</h3>
+        <ul>
+            {% for tip in suggestion %}
+                <li>{{ tip }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
 
-<p class="footer">With ❤️ from Pranav Rao</p>
+    <a href="/" class="back">Go Back</a>
+
+    <p class="footer">Built with 💙 by Pranav Rao K</p>
+
 </body>
 </html>
-

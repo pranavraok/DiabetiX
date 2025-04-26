@@ -27,23 +27,25 @@ def predict():
         if prediction[0] == 1:
             result = "DIABETIC 🚨"
             color = "red-box"
-            suggestion = """
-            1.)  Start Low Carb Diet
-            2.)  Walk Daily for 30 Minutes 🚶‍♂️
-            3.)  Avoid Sugar & Junk Foods
-            4.)  Drink 3-4 Litres of Water 💧
-            5.)  Regular Checkups (HbA1c Test) 📅
-            6.)  Meditation for Stress Control 🧠"""
+            suggestion = [
+            "1.)  Start Low Carb Diet",
+            "2.)  Walk Daily for 30 Minutes 🚶‍♂️",
+            "3.)  Avoid Sugar & Junk Foods",
+            "4.)  Drink 3-4 Litres of Water 💧",
+            "5.)  Regular Checkups (HbA1c Test) 📅",
+            "6.)  Meditation for Stress Control 🧠"
+            ]
         else:
             result = "NON-DIABETIC ✅"
             color = "green-box"
-            suggestion = """
-            1.)  Maintain Balanced Diet 🍎🥦
-            2.)  Exercise Regularly 🏃‍♀️
-            3.)  Drink Enough Water 💦
-            4.)  Avoid Processed Sugars
-            5.)  Do Regular Blood Checkup
-            6.)  Stay Happy, Stay Healthy 🔥🚀"""
+            suggestion = [
+            "1.)  Maintain Balanced Diet 🍎🥦",
+            "2.)  Exercise Regularly 🏃‍♀️",
+            "3.)  Drink Enough Water 💦",
+            "4.)  Avoid Processed Sugars",
+            "5.)  Do Regular Blood Checkup",
+            "6.)  Stay Happy, Stay Healthy 🔥🚀"
+            ]
 
         return render_template("result.html", result=result, color=color, suggestion=suggestion)
 

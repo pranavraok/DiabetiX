@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
       if (!valid) {
         alert("⚠️ Please enter all the fields properly!");
-        return false; // Stop Form Submission
+        return false; 
       }
   
       spinner.style.display = "block";
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         spinner.style.display = "none";
         button.disabled = false;
-        button.innerHTML = "🚀 PREDICT NOW";
+        button.innerHTML = "PREDICT NOW";
       }, 3000);
     };
   });
